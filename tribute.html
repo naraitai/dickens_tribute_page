@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Charles Dickens</title>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="descript" content="Tribute page from freeCodeCamp 'Responsive Web Design">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css"> <!-- Book gallery -->
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> <!-- Primary font -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> <!-- Seconday font -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="grid-container">
+        <header id="header">
+            <h1 id="title">Charles Dickens</h1> <!-- user story #2 (required) -->
+            <p><i>1812 - 1870</i></p>
+        </header>
+
+        <main id="main"> <!-- user story #1 (required) -->
+
+            <figure id="img-div"> <!-- user story #3 (required) -->
+                <img id="image" src="assets/dickens-study.jpg" alt="Illustration of Charles Dickens in a study. 1870"> <!-- user story #4/#8/#9 (required) -->
+                <figcaption id="img-caption"><i>Illustration of Charles Dickens in a study, 1870</i></figcaption> <!-- user story #5 (required) -->
+            </figure>
+
+            <section id="tribute-info"> <!-- user story #6 (required) -->
+                <section id="text">
+                    <h2 class="head">Life</h2>
+                    <h3 class="sub head">Childhood</h3>
+                    <p>
+                        Charles John Huffman Dickens was born in Portsmouth on 7th February 1812 to John and Elizabeth.
+                        After leaving Portsmouth the Dickens family settled in Chatham where they spent a happy time.
+                    </p><br>
+                    <p>
+                        Unfortunately, the happiness did not last. In 1824 Charles Dickens were taken out of school
+                        and went to work at Warren's boot-blacking factory. This change of fortunes was as a result of his father,
+                        John Dickens, being imprisoned for debt. In fact, all of the Dickens went to Marshalsea leaving Charles behind.
+                    </p><br>
+                    <p>
+                        After receiving an inheritance John Dickens was able to pay the £40 debt he owed and was released. As a result 
+                        Charles Dickens was able to return to school. However, his interrupted education came to an end at 15.
+                    </p>
+                    <h3 class="sub head">Early Adulthood</h3>
+                    <p>
+                        After his schooling Dickens went to work as a clerk in a solicitor's office. This led to a job as a court
+                        reporter and finally to a parliamentary journalist. This gave Dickens an understanding of the legal world
+                    </p>
+                    <h3 class="sub head">Adulthood</h3>
+                    <p>
+                        In the 1830s Dickens works as a parliamentary journalist while also publishing sketches under the name 'Boz'.
+                        It is also in this decade that Dickens meets and marries Catherine Hogarth, with whom he will have ten children.
+                    </p>
+                    <h3 class="sub head">Social Commentry</h3>
+                    <p>
+                        Charles Dickens published many works, but there is a unifying role; social commentary.
+                        It is his criticism of the social and economic abuses of the Victorin era that Dickens is best known.
+                    </p><br>
+                    <p>
+                        The influence of Dickens' own childhood suffering on his work is clear in stories like Oliver Twist 
+                        and David Copperfield. This compassion and understanding for his fellow man is why is he still one of
+                        the most read of great Victorian era writers.
+                    </p><br>
+                </section>
+
+                <section id="timeline">
+                    <h2 class="head">Timeline</h2>
+                    <table id="timeline-table">
+                        <tr>
+                            <td>1812</td>
+                            <td>&#8211</td>
+                            <td>Birth</td>
+                        </tr>
+                        <tr>
+                            <td>1816</td>
+                            <td>&#8211</td>
+                            <td>Family moves to Chatham <br> Charles starts school</td>
+                        </tr>
+                        <tr>
+                            <td>1821</td>
+                            <td>&#8211</td>
+                            <td>Family moves to London</td>
+                        </tr>
+                        <tr>
+                            <td>1824</td>
+                            <td>&#8211</td>
+                            <td>Father goes to debtors prison</td>
+                        </tr>
+                        <tr>
+                            <td>1827</td>
+                            <td>&#8211</td>
+                            <td>Charles finishes school</td>
+                        </tr>
+                        <tr>
+                            <td>1829</td>
+                            <td>&#8211</td>
+                            <td>Dickens becomes court reporter</td>
+                        </tr>
+                        <tr>
+                            <td>1831</td>
+                            <td>&#8211</td>
+                            <td>Dickens becomes parliamentary reporter</td>
+                        </tr>
+                        <tr>
+                            <td>1835</td>
+                            <td>&#8211</td>
+                            <td>Dickens engaged to Catherine Hogarth</td>
+                        </tr>
+                        <tr>
+                            <td>1836</td>
+                            <td>&#8211</td>
+                            <td>Begins <i>Oliver Twist</i></td>
+                        </tr>
+                        <tr>
+                            <td>1842</td>
+                            <td>&#8211</td>
+                            <td>Dickens visits Canada and the U.S.</td>
+                        </tr>
+                        <tr>
+                            <td>1858</td>
+                            <td>&#8211</td>
+                            <td>Begins public readings</td>
+                        </tr>
+                        <tr>
+                            <td>1870</td>
+                            <td>&#8211</td>
+                            <td>Charles Dickens dies following a stroke</td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+
+            <section id="gallery-container">
+                <h2 class="head">Major Works</h2>
+                <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                    <img class="gallery-cell" src="assets/christmas-carol-cover.jpg" alt="A Christmas Carol cover - Ink design">
+                    <img class="gallery-cell" src="assets/oliver-twist-cover.jpg" alt="Oliver Twist cover - Penguin Classics version">
+                    <img class="gallery-cell" src="assets/great-expectations-cover.jpg" alt="Great Expectations cover">
+                    <img class="gallery-cell" src="assets/little-dorrit-cover.jpg" alt="Little Dorrit cover - Penguin Classics">
+                    <img class="gallery-cell" src="assets/david-copperfield-cover.jpg" alt="David Copperfield cover ">
+                    <img class="gallery-cell" src="assets/nicholas-nickleby-cover.jpg" alt="Nichola Nickleby cover - Penguin Classics">
+                    <img class="gallery-cell" src="assets/bleak-house-cover.jpg" alt="Bleak House cover">
+                    <img class="gallery-cell" src="assets/hard-times-cover.jpg" alt="Hard Times cover">
+                    <img class="gallery-cell" src="assets/two-cities-cover.jpg" alt="A Tale of Two Cities cover - Alma Classics">
+                    <img class="gallery-cell" src="assets/pickwick-papers-cover.jpg" alt="Pickwick Papers cover">
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <a id="tribute-link" href="https://en.wikipedia.org/wiki/Charles_Dickens" target="_blank">More on the life of Charles Dickens</a> <!-- user story #7 (required) -->
+        </footer>
+
+        <!-- freeCodeCamp testing scripts -->
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+    </body>
+</html>

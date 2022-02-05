@@ -1,0 +1,278 @@
+/*
+freeCodeCamp 'Responsive Web Design' project
+
+Task: Create a tribute page to a person of own choice
+Tests: The project has 9 requirements (user stories)
+    Include:
+    1 - A containing element with an id of "main".
+    2 - An element with an id of "title" containing the name of chosen person.
+    3 - A figure or dive with an id of "img-div".
+    4 - An <img> element with an id of "image" inside "img-div".
+    5 - An element with an id of "img-caption" inside "img-div".
+    6 - An element with an id of "tribute-info" describing chosen person.
+    7 - An <a> element with an id of "tribute-link" that opens further information source in a new tab.
+    8 - Ensure <img> element resizes relative to the width of its parent element.
+    9 - Ensure <img> element is centered within its parent element.
+
+Completion: Submit URL to working projects with all its tests passing.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+        0.  Global Setup
+        1.  Structure Setup
+        2.  Header Elements
+        3.  Main Elements
+            a.  Headers
+            b.  Main image
+            c.  Main content
+            d.  Book gallery
+        4.  Footer Elements
+----------------------------------------------------------------*/
+
+/*-------------------------------------------------------------
+    0. Global Setup
+---------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;  
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-colour: rgb(112,128,154); /* background colour */
+    --secondary-colour: rgba(255,255,255,0.75); /* section background colour */
+    --tertiary-colour: black; /* default text colour */
+
+    --primary-font: 'Bebas Neue', cursive; /* default heading font */
+    --secondary-font: 'Roboto', sans-serif; /* deafult text font */
+
+    --margin-x: 2%; /* consistent section margin */
+    --padding-df: 1%; /* consistent element padding */
+    --radius-df: 10px /* consisten element border-radius */
+}
+
+p {
+    font-family: var(--secondary-font);
+}
+
+/*-------------------------------------------------------------
+    1. Structure Setup
+---------------------------------------------------------------*/
+
+/* Body class */
+.grid-container {
+    height: 100vh;
+    max-width: 100vw;
+
+    display: grid;
+    grid-template-areas: 
+        'header'
+        'main'
+        'footer';
+    grid-template-rows: auto 1fr 15vh;
+
+    background-color: var(--primary-colour);
+}
+
+#header {
+    grid-area: header;
+
+    margin-bottom: var(--margin-x);
+    box-shadow: 0px 0px 2.5px black;
+
+    background-color: var(--secondary-colour);
+    text-align: center;
+}
+
+#main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+#footer {
+    grid-area: footer;
+    display: grid;
+    align-items: center;
+
+    margin-top: var(--margin-x);
+    box-shadow: 0px 0px 2.5px black;
+    
+    background-color: var(--secondary-colour);
+    text-align: center;
+}
+
+/*-------------------------------------------------------------
+    2. Header Elements
+---------------------------------------------------------------*/
+
+/* Page title */
+#title {
+    font-family: var(--primary-font);
+    font-size: 3.5rem;
+}
+
+/*-------------------------------------------------------------
+    3. Main Elements
+---------------------------------------------------------------*/
+
+/*---------------------------
+    a. Headers
+-----------------------------*/
+
+/* H2 class */
+.head {
+    text-align: center;
+    font-family: var(--primary-font);
+    font-size: 2.5rem;
+}
+
+/* H3 class */
+.sub {
+    margin-top: 2.5%;
+
+    text-align: left;
+    font-size: 2rem;
+}
+
+/*---------------------------
+    b. Main image
+-----------------------------*/
+
+#img-div {
+    grid-column: 3 / 11;
+    display: grid;
+    justify-items: center;
+
+    margin: var(--margin-x) auto;
+    box-shadow: 0px 0px 5px black;
+    border-radius: var(--radius-df);
+    
+    background-color: var(--secondary-colour);
+}
+
+#image {
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px 10px 0px 0px;
+}
+
+#img-caption {
+    margin: var(--margin-x);
+}
+
+/*---------------------------
+    c. Main content
+-----------------------------*/
+
+/* Tribute text and timeline container */
+#tribute-info {
+    grid-column: 2 / 12;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    
+    
+    margin: var(--margin-x) auto;
+    box-shadow: 0px 0px 5px black;
+    border-radius: var(--radius-df);
+
+    background-color: var(--secondary-colour);
+}
+
+/* Page's main text */
+#text {
+    grid-column: span 2; /* size item large then timeline when on same row */
+
+    padding: var(--padding-df);
+}
+
+/* Timeline container */
+#timeline {
+    grid-column: span 1;
+    border-left: 2px solid rgba(112,128,154, 0.75);
+    padding: var(--padding-df);
+}
+
+@media only screen and (max-width: 700px) {
+    #timeline {
+        grid-column: span 2; /* timeline fill all of one row */
+        border: 0; /* clear all borders */
+        border-top: 2px solid rgba(112,128,154, 0.75); /* add only top border */
+    }
+}
+
+#timeline-table {
+    width: 100%;
+
+    margin-left: auto;
+
+    text-align: center;
+}
+
+#timeline-table td {
+    padding: var(--padding-df);
+}
+
+/* Timeline - Year cell "18.." */
+#timeline-table td:first-child {
+    font-family: var(--primary-font);
+    font-size: 1.15rem;
+}
+
+/* Timeline - Dash cell "-" */
+#timeline-table td:nth-child(2) {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Timeline - Event cell "Birth..." */
+#timeline-table td:nth-child(3) {
+    text-align: left;
+}
+
+/*---------------------------
+    d. Book gallery
+-----------------------------*/
+
+#gallery-container {
+    height: fit-content;
+    grid-column: 2 / 12;
+
+    margin: var(--margin-x) 0;
+    box-shadow: 0px 0px 5px black;
+    border-radius: var(--radius-df);
+    padding: var(--padding-df) 0;
+
+    background-color: var(--secondary-colour);
+    overflow-y: hidden;
+}
+
+.gallery {
+    width: 100%;
+}
+
+.gallery-cell {
+    width: 150px;
+    height: 200px;
+
+    margin: 1%;
+    box-shadow: 0px 0px 5px lightgrey;
+    border-radius: 5%;
+}
+
+/*-------------------------------------------------------------
+    4. Footer Elements
+---------------------------------------------------------------*/
+#tribute-link {
+    font-family: var(--primary-font);
+    font-size: 1.75rem;
+    color: var(--primary-colour);
+}
+
+#tribute-link:hover {
+    color: black;
+}
